@@ -1,6 +1,9 @@
 $text-primary: #161515;
 $text-muted: #4f4f4f;
 $text-secondary: #ffffff;
+$color-primary: #0F2B41;
+$color-stroke: #CDCDCD;
+
 
 %opensans-300 {
   font-family: "OpenSans-Light", sans-serif;
@@ -30,4 +33,11 @@ $text-secondary: #ffffff;
 %lora-500 {
   font-family: "Lora-Medium", serif;
   font-weight: 500;
+}
+
+%button-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
