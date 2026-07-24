@@ -10,6 +10,18 @@ body {
   font-size: 20px;
 }
 
+.promo {
+  background-color: vars.$bg-stroke;
+  text-align: center;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: vars.$text-muted;
+  padding: 7px 0 9px;
+  &__link {
+    cursor: pointer;
+  }
+}
+
 .header {
   padding: 37px 0 35px;
   text-transform: uppercase;
@@ -30,7 +42,9 @@ body {
 
   &__lang {
     display: flex;
+  }
 
+  &__lang-link {
     &--active {
       @extend %opensans-700;
     }
@@ -54,8 +68,99 @@ body {
   }
 }
 
+.top {
+  min-height: 90vh;
+  padding: 260px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center start;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+  }
+
+  &__title {
+    @extend %lora-400;
+    font-size: 75px;
+    line-height: 1.2;
+    color: vars.$text-accent;
+    text-transform: uppercase;
+    max-width: 520px;
+  }
+
+  &__link {
+    align-self: flex-start;
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 12.5px 38.5px;
+  }
+}
+
+.new-collection {
+  &__inner {
+    padding: 150px 40px 90px;
+    display: flex;
+    gap: 40px;
+  }
+
+  &__content {
+    padding-top: 75px;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__title {
+    @extend %lora-400;
+    font-size: 45px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    color: vars.$text-muted;
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 10px 65px;
+    font-size: 16px;
+    border: 1px solid vars.$text-primary;
+    align-self: flex-start;
+    margin-top: auto;
+  }
+
+  &__image1 {
+    padding-top: 75px;
+    max-width: fit-content;
+  }
+
+  &__box {
+    position: relative;
+    display: flex;
+    padding-bottom: 70px;
+  }
+
+  &__image2 {
+    position: absolute;
+    top: 0;
+    left: -115px;
+    max-width: fit-content;
+  }
+
+  &__box-text {
+    color: vars.$text-muted;
+    max-width: 290px;
+    text-transform: uppercase;
+    margin-top: auto;
+  }
+}
+
 .footer {
-  background-color: vars.$color-primary;
+  background-color: vars.$bg-color-secondary;
   color: vars.$text-secondary;
   font-size: 16px;
 
@@ -64,12 +169,12 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 1px solid vars.$color-stroke;
+    border-bottom: 1px solid vars.$bg-stroke;
     margin-bottom: 50px;
   }
 
   &__menu-link {
-    border-bottom: 1px solid vars.$color-stroke;
+    border-bottom: 1px solid vars.$bg-stroke;
   }
 
   &__elements {
@@ -96,15 +201,18 @@ body {
   &__form {
     width: 250px;
     position: relative;
+    border-bottom: 1px solid vars.$bg-stroke;
+    padding-bottom: 5px;
   }
 
   &__form-input {
     display: block;
     width: 100%;
-    border: none;
-    background-color: vars.$color-primary;
+    @extend %button-reset;
+    background-color: vars.$bg-color-secondary;
     color: vars.$text-secondary;
     padding: 1px 30px 5px 0;
+
     &::placeholder {
       color: vars.$text-secondary;
     }
@@ -120,6 +228,7 @@ body {
   &__social-list {
     display: flex;
     gap: 10px;
+    cursor: pointer;
   }
 
   &__bottom {
@@ -146,6 +255,7 @@ body {
 
   &__bottom-item + .footer__bottom-item {
     position: relative;
+
     &::before {
       content: "|";
       position: absolute;
