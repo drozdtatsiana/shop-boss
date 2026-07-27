@@ -1,0 +1,44 @@
+<!--=include promo.html  -->
+
+<!--=include header.html  -->
+
+<main class="main">
+
+    <section class="appointment">
+        <div class="container">
+            <h2 class="appointment__title">
+                BOOK AN APPOINTMENT
+            </h2>
+            <div class="appointment__box">
+                <form action="#" class="appointment__form">
+                    <p class="appointment__box-title">
+                        CONTACT INFORMATHION
+                    </p>
+                    <p class="appointment__box-text">
+                        Fill in your contact details
+                    </p>
+                    <label class="visually-hidden" for="userFirstName">first name</label>
+                    <input class="appointment__input" type="text" name="firstName" id="userFirstName"
+                        placeholder="First name">
+                    <label class="visually-hidden" for="userLastName">last name</label>
+                    <input class="appointment__input" type="text" name="lastName" id="userLastName"
+                        placeholder="Last name">
+                    <label class="visually-hidden" for="userEmail">email</label>
+                    <input class="appointment__input" type="email" name="email" id="userEmail" placeholder="Email">
+                    <label class="visually-hidden" for="userMobile">mobile</label>
+                    <input class="appointment__input" type="tel" name="mobile" id="userMobile" placeholder="Mobile">
+                    <button class="appointment__btn" type="submit">SEND</button>
+                </form>
+                <picture class="appointment__image">
+                    <source srcset="images/appointment.avif" type="image/avif">
+                    <source srcset="images/appointment.webp" type="image/webp">
+                    <img src="images/appointment.jpg" width="580" height="490"
+                        alt="Close-up portrait of David Beckham in a classic dark blue BOSS men's shirt">
+                </picture>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!--=include footer.html  -->

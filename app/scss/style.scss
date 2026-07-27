@@ -469,3 +469,68 @@ body {
     margin-top: 90px;
   }
 }
+
+.appointment {
+  padding: 50px 0 100px;
+
+  &__title {
+    @extend %lora-400;
+    font-size: 45px;
+    color: vars.$text-accent;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 77px;
+  }
+
+  &__box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 79px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  &__form-title {
+    @extend %lora-400;
+    font-size: 30px;
+    color: vars.$text-muted;
+    text-transform: uppercase;
+    margin-bottom: 80px;
+  }
+
+  &__form-text {
+    @extend %opensans-700;
+    font-size: 20px;
+    color: vars.$text-muted;
+    margin-bottom: 30px;
+  }
+
+  &__input {
+    color: vars.$text-muted;
+    border: none;
+    border-bottom: 1px solid vars.$text-muted;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    &::placeholder {
+      color: vars.$text-muted;
+    }
+  }
+
+  &__btn {
+    color: vars.$text-secondary;
+    text-transform: uppercase;
+    border-radius: 3px;
+    background-color: vars.$bg-color-btn;
+    padding: 12px;
+    margin-top: auto;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: fit-content;
+  }
+}
