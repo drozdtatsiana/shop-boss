@@ -2,6 +2,7 @@
 @use "vars";
 @use "fonts";
 @use "global";
+@use "../../node_modules/swiper/swiper-bundle.css";
 
 body {
   @extend %opensans-400;
@@ -864,4 +865,66 @@ body {
   height: 15px;
   border-radius: 3px;
   border: 1px solid vars.$text-muted;
+}
+
+.look {
+  text-align: center;
+
+  &__inner {
+    max-width: 890px;
+    margin: 0 auto 90px;
+    position: relative;
+  }
+
+  &__title {
+    @extend %lora-400;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding-bottom: 25px;
+    border-bottom: 2px solid vars.$bg-stroke;
+    margin-bottom: 40px;
+  }
+
+  &__slider {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  &__slide {
+    text-align: center;
+  }
+
+  &__slide-img {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: fit-content;
+  }
+
+  &__slide-title {
+    color: vars.$text-muted;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  &__slide-price {
+    @extend %opensans-700;
+    font-size: 20px;
+    color: vars.$text-muted;
+  }
+
+  &__button-prev {
+    position: absolute;
+    cursor: pointer;
+    left: -20;
+    top: 50%;
+    z-index: 10;
+  }
+
+  &__button-next {
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    right: -20;
+    z-index: 10;
+  }
 }
