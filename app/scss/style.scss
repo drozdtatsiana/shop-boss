@@ -928,3 +928,69 @@ body {
     z-index: 10;
   }
 }
+
+.page-404 {
+  &__container {
+    max-width: 1562;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__content {
+    margin: auto 15px 60px 35px;
+  }
+
+  &__title {
+    @extend %lora-400;
+    font-size: 160px;
+    text-transform: uppercase;
+    margin-bottom: 80px;
+  }
+
+  &__link {
+    display: flex;
+    gap: 20px;
+    @extend %lora-400;
+    font-size: 48px;
+    text-transform: uppercase;
+    max-width: 731px;
+    align-items: flex-end;
+
+    span {
+      display: inline-block;
+      max-width: 620px;
+    }
+  }
+
+  &__moving {
+    opacity: 0.2;
+    overflow: hidden;
+  }
+
+  &__moving-text {
+    @extend %lora-400;
+    font-size: 160px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    animation-name: moving;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes moving {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
