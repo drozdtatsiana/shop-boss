@@ -989,6 +989,7 @@ body {
     0% {
       transform: translateX(0);
     }
+
     100% {
       transform: translateX(-100%);
     }
@@ -997,17 +998,20 @@ body {
 
 .blog-main {
   margin-bottom: 30px;
+
   &__inner {
     display: flex;
-    gap:40px;
+    gap: 40px;
     padding: 40px 0;
     border-top: 1px solid #DCDDDC;
     border-bottom: 1px solid #DCDDDC;
   }
+
   &__img {
     width: 100%;
     max-width: fit-content;
   }
+
   &__content {
     display: flex;
     flex-direction: column;
@@ -1020,19 +1024,22 @@ body {
     border: 1px solid #DCDDDC;
     align-self: flex-start;
   }
+
   &__title {
-    a{
-       @extend %lora-400;
-    font-size: 48px;
-    text-transform: uppercase;
-    line-height: 1.2;
+    a {
+      @extend %lora-400;
+      font-size: 48px;
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
   }
-}
+
   &__text {
     font-size: 24px;
     opacity: .4;
     max-width: 660px;
   }
+
   &__link {
     margin-top: auto;
     font-size: 24px;
@@ -1046,64 +1053,60 @@ body {
 .blog {
   &__nav {
     display: flex;
-    gap:35px;
+    gap: 35px;
     align-items: center;
     margin-bottom: 30px;
   }
+
   &__nav-title {
-     @extend %lora-400;
+    @extend %lora-400;
     font-size: 32px;
     margin-right: auto;
   }
-  &__select-form {
-  
-  }
-  &__select {
 
-  }
-  &__search {}
   &__search-form {
     position: relative;
     width: 300px;
-    padding-top:2px;
+    padding-top: 2px;
   }
+
   &__search-input {
     opacity: .4;
     border: none;
     border-bottom: 1px solid #161815;
     padding: 2px 31px 14px 3px;
     width: 100%;
+
     &::placeholder {
-      color:#161815;
+      color: #161815;
     }
   }
+
   &__search-btn {
     position: absolute;
     right: 3px;
     top: 8px;
   }
- 
+
   &__nav-btns {
     display: flex;
     gap: 20px;
     margin-left: 100px;
   }
- 
-  &__items {}
+
   &__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 50px 20px;
     margin-bottom: 50px;
   }
-  &__item {}
-  &__item-link-img {}
+
   &__item-img {
     width: 100%;
     max-width: fit-content;
     margin-bottom: 20px;
   }
-  &__item-content {}
+
   &__item-category {
     font-size: 14px;
     margin-bottom: 16px;
@@ -1111,11 +1114,13 @@ body {
     border: 1px solid #161815;
     display: inline-block;
   }
+
   &__item-title {
     @extend %lora-500;
     font-size: 24px;
     margin-bottom: 8px;
   }
+
   &__item-date {
     @extend %inter-400;
     font-style: 16px;
@@ -1127,11 +1132,13 @@ body {
   opacity: .4;
   border: none;
   border-bottom: 1px solid #161815;
-  width:300px;
-   padding: 2px 31px 14px 3px;
-   appearance: none;
+  width: 300px;
+  padding: 2px 31px 14px 3px;
+  appearance: none;
+
   &__wrapper {
     position: relative;
+
     &::after {
       content: '';
       position: absolute;
@@ -1141,6 +1148,103 @@ body {
       width: 19px;
       height: 18px;
     }
+  }
+}
 
+.blog-one {
+  margin-bottom: 40px;
+
+  &__content {
+    h1 {
+      @extend %lora-400;
+      font-size: 96px;
+      text-transform: uppercase;
+      line-height: 1.2;
+      margin-bottom: 22px;
+    }
+
+    b {
+      @extend %lora-400;
+      font-size: 32px;
+      color: vars.$text-muted;
+      max-width: 1220px;
+      display: block;
+
+      &:first-of-type {
+        color: vars.$text-accent;
+        margin-bottom: 60px;
+      }
+    }
+
+    h2 {
+      @extend %lora-500;
+      font-size: 40px;
+      color: vars.$text-muted;
+      margin-bottom: 40px;
+    }
+
+    p {
+      color: vars.$text-muted;
+      margin-bottom: 40px;
+      max-width: 1220px;
+    }
+
+    picture {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__stats {
+    display: flex;
+  }
+
+  &__category {
+    font-size: 14px;
+    color: vars.$text-accent;
+    padding: 8px 24px;
+    border: 1px solid rgba(#161515, 0.4);
+    margin-right: 40px;
+    align-self: flex-start;
+  }
+
+  &__date {
+    @extend %inter-400;
+    font-size: 18px;
+    opacity: 0.3;
+    padding-right: 20px;
+    position: relative;
+    margin-right: 20px;
+
+    &::before {
+      content: '';
+      width: 2px;
+      height: 29px;
+      background-color: rgba(#161515, 0.4);
+      position: absolute;
+      top: 0;
+      left: 95px;
+    }
+  }
+
+  &__stats-list {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  &__stats-link {
+    opacity: .4;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    color: rgba(#161515, 0.4);
+
+    svg {
+      fill: currentColor;
+    }
+
+    &:active {
+      color: rgb(244, 6, 6);
+    }
   }
 }
