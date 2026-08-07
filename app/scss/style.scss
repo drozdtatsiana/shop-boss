@@ -271,15 +271,18 @@ body {
   position: relative;
 
   &__image {
-    width: 100%;
-    max-width: fit-content;
+    max-width: 780px;
+     width: 100%;
+     object-fit: cover;
   }
 
   &__box {
     position: absolute;
-    top: 94px;
+    top: 50%;
+    transform: translateY(-50%);
     left: 820px;
     color: vars.$text-secondary;
+    margin-right: 40px;
   }
 
   &__title {
@@ -490,35 +493,32 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 79px;
   }
-
-  &__form {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-  }
-
-  &__form-title {
-    @extend %lora-400;
+  &__box-title {
+     @extend %lora-400;
     font-size: 30px;
-    color: vars.$text-muted;
-    text-transform: uppercase;
-    margin-bottom: 80px;
+color: vars.$text-muted;
+text-transform: uppercase;
+margin-bottom: 80px;
   }
-
-  &__form-text {
+  &__box-text {
     @extend %opensans-700;
     font-size: 20px;
     color: vars.$text-muted;
     margin-bottom: 30px;
   }
 
-  &__input {
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
     color: vars.$text-muted;
+  } 
+
+  &__input {
     border: none;
     border-bottom: 1px solid vars.$text-muted;
     padding-bottom: 10px;
     margin-bottom: 20px;
-
     &::placeholder {
       color: vars.$text-muted;
     }
@@ -534,8 +534,9 @@ body {
   }
 
   &__image {
-    width: 100%;
-    max-width: fit-content;
+    max-width: 580px;
+     width: 100%;
+     object-fit: contain;
   }
 }
 
@@ -588,6 +589,7 @@ body {
       "da db cc cc"
       "ea eb ec ed";
     gap: 40px;
+    margin-bottom: 20px;
   }
 
   &__item {
@@ -670,8 +672,6 @@ body {
 }
 
 .pagination {
-  margin-top: 20px;
-  margin-bottom: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -720,6 +720,10 @@ body {
     display: grid;
     grid-template-columns: 2fr 1.1fr;
     gap: 40px;
+  }
+
+  &__image {
+    width: 100%;
   }
 
   &__images {
@@ -1246,5 +1250,142 @@ body {
     &:active {
       color: rgb(244, 6, 6);
     }
+  }
+}
+
+.reviews {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  &__top-title {
+     @extend %lora-400;
+      font-size: 64px;
+  }
+  &__top-link {
+    font-size: 24px;
+    color: rgba(#161515, 0.4);
+    border: none;
+    border-bottom: 1px solid vars.$bg-color-btn;
+  }
+  &__slider-box {
+    margin-bottom: 60px;
+  }
+  &__slider {
+    margin-bottom: 24px;
+    overflow: hidden;
+    width: calc(100vw - (100vw - 1500px) / 2);
+  }
+
+  &__slider-wrapper {
+    
+
+    
+  }
+  &__slide {}
+  &__slider-nav {
+    position: absolute;
+    max-width: 1520px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+  }
+  &__pagination {
+    position: absolute;
+  top: 24px;
+  right: 54px;
+  left: auto;
+  width: auto;
+  color: #BAB9B9;
+
+  .swiper-pagination-current {
+    display: inline-block;
+    color:  vars.$text-accent;
+    padding-right: 10px;
+  }
+  span + span {
+    padding-left: 10px;
+  }
+}
+
+  &__btn {
+    position: absolute;
+    cursor: pointer;
+    top: 24px;
+  }
+  &__button-prev {
+right:158px; 
+  }
+  &__button-next {
+    right: 0;
+   
+  }
+  &__slider-addreview {
+    display: inline-block;
+    font-size: 16px;
+    padding: 24px 216px;
+    border: 1px solid vars.$bg-color-btn;
+    margin-top: 24px;
+  }
+  &__blog {
+    max-width: 1200;
+    margin: 0 auto 60px;
+  }
+  &__item {
+    padding: 40px 50px;
+    border: 1px solid vars.$bg-color-btn;
+    margin-bottom: 20px;
+  }
+  &__item-data {
+    font-size: 14px;
+    opacity: .4;
+    margin-bottom: 16px;
+  }
+  &__item-name {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-top: 18px;
+    margin-bottom: 24px;
+  }
+  &__item-avatar-img {
+    width: 100%;
+    max-width: fit-content;
+  }
+
+  &__item-text {
+    margin-bottom: 24px;
+     color: #454443;
+  }
+  &__box-img {
+    display: flex;
+    gap: 10px;
+}
+}
+
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-pagination {
+}
+.review {
+  &__button-prev {}
+}
+.reviews-box {
+  display: flex;
+  align-items: center;
+  gap:10px;
+  &__number {
+  
+  }
+  &__list {
+    display: flex;
+  }
+  &__item {}
+  &__all {
+    margin-left: 20px;
   }
 }
