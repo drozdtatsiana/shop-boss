@@ -4,6 +4,7 @@
 @use "global";
 @use "../../node_modules/nouislider/dist/nouislider.css";
 @use "../../node_modules/swiper/swiper-bundle.css";
+@use "media";
 
 body {
   @extend %opensans-400;
@@ -43,64 +44,84 @@ body {
     margin-bottom: 32px;
   }
 
-  &__lang {
-    display: flex;
+  &__btn {
+    display: none;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    padding: 0;
   }
 
-  &__lang-link {
-    &--active {
-      @extend %opensans-700;
+  &__lang {
+    display: flex;
+    margin-right: 215px;
+    padding-left: 0;
+  }
+    &__lang-link--active {
+        @extend %opensans-700;
+      }
+    
+  
+
+    &__actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
     }
   }
 
-  &__actions {
+
+  .menu {
     display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-}
 
-.logo {
-  display: inline-block;
-}
-
-.menu {
-  &__list {
-    display: flex;
-    gap: 30px;
-  }
-}
-
-.top {
-  min-height: 90vh;
-  padding: 260px 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center start;
-
-  &__inner {
-    display: flex;
-    flex-direction: column;
-    gap: 33px;
+    &__list {
+      display: flex;
+      gap: 30px;
+      padding-left: 0;
+    }
   }
 
-  &__title {
-    @extend %lora-400;
-    font-size: 75px;
-    line-height: 1.2;
-    color: vars.$text-accent;
-    text-transform: uppercase;
-    max-width: 520px;
+  .logo {
+    display: inline-block;
   }
 
-  &__link {
-    align-self: flex-start;
-    background-color: #000;
-    color: #fff;
-    text-transform: uppercase;
-    padding: 12.5px 38.5px;
+  .menu {
+    &__list {
+      display: flex;
+      gap: 30px;
+    }
   }
-}
+
+  .top {
+    min-height: 90vh;
+    padding: 260px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center start;
+
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      gap: 33px;
+    }
+
+    &__title {
+      @extend %lora-400;
+      font-size: 75px;
+      line-height: 1.2;
+      color: vars.$text-accent;
+      text-transform: uppercase;
+      max-width: 520px;
+    }
+
+    &__link {
+      align-self: flex-start;
+      background-color: #000;
+      color: #fff;
+      text-transform: uppercase;
+      padding: 12.5px 38.5px;
+    }
+  }
 
 .new-collection {
   &__inner {
@@ -214,6 +235,7 @@ body {
     background-color: vars.$bg-color-secondary;
     color: vars.$text-secondary;
     padding: 1px 30px 5px 0;
+    border: none;
 
     &::placeholder {
       color: vars.$text-secondary;
@@ -222,7 +244,7 @@ body {
 
   &__form-btn {
     position: absolute;
-    top: 5px;
+    top: 6px;
     right: 0;
   }
 
@@ -233,7 +255,7 @@ body {
   }
 
   &__bottom {
-    background-color: vars.$bg-color-primary;
+    background-color: vars.$bg-color-btn;
     padding: 7px 0 9px;
     font-size: 11px;
   }
@@ -254,7 +276,7 @@ body {
     gap: 0 37px;
   }
 
-  &__bottom-item + .footer__bottom-item {
+  &__bottom-item+.footer__bottom-item {
     position: relative;
 
     &::before {
@@ -410,7 +432,7 @@ body {
     list-style-type: disc;
   }
 
-  &__item + .our-advantages__item {
+  &__item+.our-advantages__item {
     margin-top: 30px;
   }
 }
@@ -563,7 +585,7 @@ body {
     position: relative;
   }
 
-  &__item + .breadcrumbs__item::before {
+  &__item+.breadcrumbs__item::before {
     content: "/";
     position: absolute;
     left: -10px;
@@ -822,7 +844,7 @@ body {
   overflow: hidden;
   clip: rect(0 0 0 0);
 
-  &:checked + .radio-style::before {
+  &:checked+.radio-style::before {
     content: "";
     width: 10px;
     height: 10px;
@@ -851,7 +873,7 @@ body {
   overflow: hidden;
   clip: rect(0 0 0 0);
 
-  &:checked + .check-style::before {
+  &:checked+.check-style::before {
     content: "";
     width: 9px;
     height: 9px;
@@ -1059,6 +1081,7 @@ body {
 
 .blog {
   margin-bottom: 50px;
+
   &__nav {
     display: flex;
     gap: 35px;
@@ -1170,7 +1193,7 @@ body {
       margin-bottom: 22px;
     }
 
-    b{
+    b {
       @extend %lora-400;
       font-size: 32px;
       color: vars.$text-muted;
@@ -1182,7 +1205,7 @@ body {
         margin-bottom: 60px;
       }
     }
-  
+
 
     h2 {
       @extend %lora-500;
@@ -1191,7 +1214,7 @@ body {
       margin-bottom: 40px;
     }
 
-    h3{
+    h3 {
       @extend %lora-400;
       font-size: 32px;
       color: vars.$text-muted;
@@ -1311,7 +1334,7 @@ body {
     left: auto;
     width: auto;
     color: #bab9b9;
-  
+
 
     .swiper-pagination-current {
       display: inline-block;
@@ -1319,7 +1342,7 @@ body {
       padding-right: 10px;
     }
 
-    span + span {
+    span+span {
       padding-left: 10px;
     }
   }
@@ -1466,9 +1489,11 @@ body {
     column-count: 2;
     column-gap: 40px;
     font-size: 11px;
+
     &--line {
       column-count: 1;
     }
+
     &--range {
       column-count: 1;
     }
@@ -1632,6 +1657,7 @@ body {
       color: vars.$text-accent;
       font-size: 11px;
       -moz-appearance: textfield;
+
       &::-webkit-outer-spin-button,
       &::-webkit-inner-spin-button {
         appearance: none;
@@ -1703,6 +1729,7 @@ body {
 
 .checkout {
   margin-bottom: 48px;
+
   &__top {
     margin-bottom: 48px;
     display: flex;
@@ -1725,7 +1752,7 @@ body {
     width: 100%;
   }
 
-  &__info-item + .checkout__info-item {
+  &__info-item+.checkout__info-item {
     margin-top: 80px;
   }
 
@@ -1810,11 +1837,11 @@ body {
     align-items: center;
   }
 
-  .radio-label:has(.radio-box:checked) + .checkout__info-delprice {
+  .radio-label:has(.radio-box:checked)+.checkout__info-delprice {
     opacity: 1;
   }
 
-  .radio-box:checked + .radio-style + .radio-name {
+  .radio-box:checked+.radio-style+.radio-name {
     opacity: 1;
   }
 
@@ -1927,6 +1954,7 @@ body {
   &__item-listbox {
     display: flex;
     margin-bottom: 10px;
+
     &:last-child {
       margin-top: 40px;
       @extend %opensans-700;
@@ -1953,6 +1981,7 @@ body {
 .order {
   padding: 60px 40px;
   border: 1px solid #dcddde;
+
   &__title {
     @extend %lora-400;
     font-size: 32px;
@@ -1972,6 +2001,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     &:last-child {
       opacity: 1;
       font-size: 32px;
