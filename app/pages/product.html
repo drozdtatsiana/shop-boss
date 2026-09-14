@@ -6,31 +6,37 @@
     <section class="product">
         <div class="container">
             <div class="product__inner">
-                <div class="product__images">
-                    <picture>
-                        <source srcset="images/product-1.avif"
-                            type="image/avif">
-                        <source srcset="images/product-1.webp"
-                            type="image/webp">
-                        <img class="product__image" src="images/product-1.jpg" width="219" height="369"
-                            alt="front view of white cotton trousers">
-                    </picture>
-                    <picture>
-                        <source srcset="images/product-2.avif"
-                            type="image/avif">
-                        <source srcset="images/product-2.webp"
-                            type="image/webp">
-                        <img class="product__image" src="images/product-2.jpg" width="483" height="757"
-                            alt="David Beckham wearing white cotton trousers and a blue blazer">
-                    </picture>
-                    <picture>
-                        <source srcset="images/product-3.avif"
-                            type="image/avif">
-                        <source srcset="images/product-3.webp"
-                            type="image/webp">
-                        <img class="product__image" src="images/product-3.jpg" width="219" height="369"
-                            alt="close-up of the waistband and closure on white cotton trousers">
-                    </picture>
+                <div class="slider-mobile">
+                    <div class="product__images swiper-wrapper">
+                        <picture class="swiper-slide">
+                            <source srcset="images/product-1.avif" type="image/avif">
+                            <source srcset="images/product-1.webp" type="image/webp">
+                            <img class="product__image" src="images/product-1.jpg" width="219" height="369"
+                                alt="front view of white cotton trousers">
+                        </picture>
+                        <picture class="swiper-slide">
+                            <source srcset="images/product-2.avif" type="image/avif">
+                            <source srcset="images/product-2.webp" type="image/webp">
+                            <img class="product__image" src="images/product-2.jpg" width="483" height="757"
+                                alt="David Beckham wearing white cotton trousers and a blue blazer">
+                        </picture>
+                        <picture class="swiper-slide">
+                            <source srcset="images/product-3.avif" type="image/avif">
+                            <source srcset="images/product-3.webp" type="image/webp">
+                            <img class="product__image" src="images/product-3.jpg" width="219" height="369"
+                                alt="close-up of the waistband and closure on white cotton trousers">
+                        </picture>
+                    </div>
+  <div class="product__button-prev">
+                        <svg width="10" height="18">
+                            <use xlink:href="images/sprite.svg#icon-prev"></use>
+                        </svg>
+                    </div>
+                    <div class="product__button-next">
+                        <svg width="10" height="18">
+                            <use xlink:href="images/sprite.svg#icon-next"></use>
+                        </svg>
+                    </div>
                 </div>
                 <div class="product__content">
                     <h3 class="product__title">
@@ -50,8 +56,7 @@
                         <dt class="product__content-term">
                             COLOR
                         </dt>
-                        <dd
-                            class="product__content-definition product__content-checkbox">
+                        <dd class="product__content-definition product__content-checkbox">
                             <label class="radio-label">
                                 <input class="radio-box" name="color" type="radio">
                                 <span class="radio-style"></span>
@@ -78,8 +83,7 @@
                         <dt class="product__content-term">
                             SIZE
                         </dt>
-                        <dd
-                            class="product__content-definition product__content-checkbox">
+                        <dd class="product__content-definition product__content-checkbox">
                             <label class="checkbox-label">
                                 <input class="check-box" type="checkbox">
                                 <span class="check-style"></span>
@@ -145,13 +149,9 @@
                     <div class="look__slider-wrapper swiper-wrapper">
                         <div class="look__slide swiper-slide">
                             <picture>
-                                <source srcset="images/look-1.avif"
-                                    type="image/avif">
-                                <source srcset="images/look-1.webp"
-                                    type="image/webp">
-                                <img class="look__slide-img"
-                                    src="images/look-1.jpg" width="270"
-                                    height="400"
+                                <source srcset="images/look-1.avif" type="image/avif">
+                                <source srcset="images/look-1.webp" type="image/webp">
+                                <img class="look__slide-img" src="images/look-1.jpg" width="270" height="400"
                                     alt="model wearing white leather trainers and a navy suit, presenting Hugo Boss men's footwear.">
                             </picture>
                             <p class="look__slide-title">
@@ -164,13 +164,9 @@
                         </div>
                         <div class="look__slide swiper-slide">
                             <picture>
-                                <source srcset="images/look-2.avif"
-                                    type="image/avif">
-                                <source srcset="images/look-2.webp"
-                                    type="image/webp">
-                                <img class="look__slide-img"
-                                    src="images/look-2.jpg" width="270"
-                                    height="400"
+                                <source srcset="images/look-2.avif" type="image/avif">
+                                <source srcset="images/look-2.webp" type="image/webp">
+                                <img class="look__slide-img" src="images/look-2.jpg" width="270" height="400"
                                     alt="man wearing a charcoal gray slim-fit coat in cashmere over a black turtleneck.">
                             </picture>
                             <p class="look__slide-title">
@@ -183,13 +179,9 @@
                         </div>
                         <div class="look__slide swiper-slide">
                             <picture>
-                                <source srcset="images/look-3.avif"
-                                    type="image/avif">
-                                <source srcset="images/look-3.webp"
-                                    type="image/webp">
-                                <img class="look__slide-img"
-                                    src="images/look-3.jpg" width="270"
-                                    height="400"
+                                <source srcset="images/look-3.avif" type="image/avif">
+                                <source srcset="images/look-3.webp" type="image/webp">
+                                <img class="look__slide-img" src="images/look-3.jpg" width="270" height="400"
                                     alt="model posing in a navy blue T-shirt in soft linen and dark trousers against a white background.">
                             </picture>
                             <p class="look__slide-title">
@@ -202,13 +194,9 @@
                         </div>
                         <div class="look__slide swiper-slide">
                             <picture>
-                                <source srcset="images/look-1.avif"
-                                    type="image/avif">
-                                <source srcset="images/look-1.webp"
-                                    type="image/webp">
-                                <img class="look__slide-img"
-                                    src="images/look-1.jpg" width="270"
-                                    height="400"
+                                <source srcset="images/look-1.avif" type="image/avif">
+                                <source srcset="images/look-1.webp" type="image/webp">
+                                <img class="look__slide-img" src="images/look-1.jpg" width="270" height="400"
                                     alt="model wearing white leather trainers and a navy suit, presenting Hugo Boss men's footwear.">
                             </picture>
                             <p class="look__slide-title">
@@ -221,13 +209,9 @@
                         </div>
                         <div class="look__slide swiper-slide">
                             <picture>
-                                <source srcset="images/look-2.avif"
-                                    type="image/avif">
-                                <source srcset="images/look-2.webp"
-                                    type="image/webp">
-                                <img class="look__slide-img"
-                                    src="images/look-2.jpg" width="270"
-                                    height="400"
+                                <source srcset="images/look-2.avif" type="image/avif">
+                                <source srcset="images/look-2.webp" type="image/webp">
+                                <img class="look__slide-img" src="images/look-2.jpg" width="270" height="400"
                                     alt="man wearing a charcoal gray slim-fit coat in cashmere over a black turtleneck.">
                             </picture>
                             <p class="look__slide-title">
@@ -240,13 +224,9 @@
                         </div>
                         <div class="look__slide swiper-slide">
                             <picture>
-                                <source srcset="images/look-3.avif"
-                                    type="image/avif">
-                                <source srcset="images/look-3.webp"
-                                    type="image/webp">
-                                <img class="look__slide-img"
-                                    src="images/look-3.jpg" width="270"
-                                    height="400"
+                                <source srcset="images/look-3.avif" type="image/avif">
+                                <source srcset="images/look-3.webp" type="image/webp">
+                                <img class="look__slide-img" src="images/look-3.jpg" width="270" height="400"
                                     alt="model posing in a navy blue T-shirt in soft linen and dark trousers against a white background.">
                             </picture>
                             <p class="look__slide-title">
