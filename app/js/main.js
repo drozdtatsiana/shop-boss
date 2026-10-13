@@ -1,31 +1,42 @@
 
+
 const openPopupBtn = document.querySelector('.catalog__popup');
 const popup = document.querySelector('.popup');
 const popupOverlay = document.querySelector('.popup__overlay');
 const closePopupBtn = document.querySelector('.close-popup');
 
 
-function openPopup() {
-popup.setAttribute('aria-hidden', 'false');
-document.body.classList.add("scroll-lock");
+if (popup && openPopupBtn && closePopupBtn) {
+    
+    function openPopup() {
+        popup.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('scroll-lock');
+    }
+
+    function closePopup() {
+        popup.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('scroll-lock');
+    }
+
+  
+    if (popupOverlay) {
+        popupOverlay.addEventListener('click', closePopup);
+    }
+
+  
+    openPopupBtn.addEventListener('click', openPopup);
+    closePopupBtn.addEventListener('click', closePopup);
+
+    
+    document.addEventListener('keydown', (e) => {
+        if (
+            e.key === 'Escape' &&
+            popup.getAttribute('aria-hidden') === 'false'
+        ) {
+            closePopup();
+        }
+    });
 }
-
-function closePopup() {
-popup.setAttribute('aria-hidden', 'true');
-document.body.classList.remove("scroll-lock");
-}
- if(popupOverlay) {
-  popupOverlay.addEventListener('click', closePopup);
- }
-
-openPopupBtn.addEventListener('click', openPopup);
-closePopupBtn.addEventListener('click', closePopup);
-
-document.addEventListener('keydown', (e) => {
-  if(e.key = 'Escape' && popup.getAttribute('aria-hidden') === 'false')  {
-   closePopup() 
-  }
-})
 
 
 const openBtn = document.querySelector('.open-modal');
@@ -146,13 +157,16 @@ const reviewsSwiper = new Swiper('.reviews__slider', {
           },
         },
 });
-const headerBtn = document.querySelector('.header__btn');
+const headerBtn = document.querySelector('.menu__btn');
 const menu = document.querySelector('.menu');
+const bodyLock = document.querySelector('body');
 
-
-headerBtn .addEventListener('click', ()=> {
-  menu.classList.toggle('menu--active');
-})
+if (headerBtn && menu) {
+    headerBtn.addEventListener('click', () => {
+        menu.classList.toggle('menu--active');
+        bodyLock.classList.toggle('scroll-lock');
+    });
+}
 
 
 const modeContainer = document.querySelector('.view-mode__container');
@@ -207,7 +221,6 @@ rangeMin.addEventListener('change', ()=> {
 rangeMax.addEventListener('change', ()=> {
     rangeSlider.noUiSlider.set([null,  rangeMax.value]);
 });
-
 
 
 
